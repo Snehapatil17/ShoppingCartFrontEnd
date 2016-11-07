@@ -7,20 +7,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>MY NEW INDEX PAGE</title>
+<title>Beautiful You</title>
 </head>
 
 
 <body>
  
- <h1>Beautiful You </h1>
+ <jsp:include page="header.jsp"></jsp:include>
  	
  	
  	
  
 
  
- New User <a href="login.jsp">Log In</a>
+ <%-- New User <a href="login.jsp">Log In</a>
  
 <c:if test="${isuserClickedlogin}">
 	<jsp:include page="login.jsp"></jsp:include>
@@ -33,7 +33,7 @@ Exisiting User <a href="signin.jsp">Sign In</a>
 <jsp:include page="signin.jsp"></jsp:include>
 
 </c:if>
-
+ --%>
 
 
 </body>
