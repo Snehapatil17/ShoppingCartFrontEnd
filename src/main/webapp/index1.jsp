@@ -36,7 +36,18 @@ Exisiting User <a href="signin.jsp">Sign In</a>
 
 </c:if>
  --%>
+<br>
 
+ <jsp:include page="ExploerCat.jsp"></jsp:include>
+
+
+<br>
+
+
+<jsp:include page="Footer.jsp"></jsp:include>
+
+
+</body>
 
 </body>
 </html>
