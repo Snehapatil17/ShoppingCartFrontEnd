@@ -17,7 +17,9 @@
  	
  	
  	
+ <br>
  
+ <jsp:include page="slider.jsp"></jsp:include>
 
  
  <%-- New User <a href="login.jsp">Log In</a>
