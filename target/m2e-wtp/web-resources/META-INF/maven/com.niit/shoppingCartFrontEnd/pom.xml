@@ -8,6 +8,14 @@
   <name>shoppingCartFrontEnd Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  
+  <dependency>
+   <groupId>com.niit</groupId>
+  <artifactId>BackEnd</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  </dependency>
+  
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
 <dependency>
     <groupId>org.springframework</groupId>
@@ -94,6 +102,13 @@
     <artifactId>spring-security-taglibs</artifactId>
     <version>4.1.3.RELEASE</version>
 </dependency>
+    
+   <!--  <dependency>
+    <groupId>com.niit</groupId>
+  <artifactId>BackEnd</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+    </dependency> -->
+    
     
   </dependencies>
   <build>

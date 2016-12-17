@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse navbar-bottom">
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
   <div class="container-fluid">
     <div class="navbar-footer">
       <a class="navbar-brand" href="#">Beautiful You</a>

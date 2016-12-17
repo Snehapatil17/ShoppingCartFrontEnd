@@ -7,15 +7,22 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 </head>
 
 <style>
-form {
-	width: auto;
+
+form{
+	width: 50%;
     border: 2px solid black;
-    
+    padding-top: 8px;
+    background-color: lightgreen;
 }
+
+
+.container {
+    padding: 16px;
+}
+
 
 input[type=text], input[type=password] {
     width: 100%;
@@ -25,58 +32,68 @@ input[type=text], input[type=password] {
     border: 1px solid black;
     box-sizing: border-box;
 }
-
-button {
-    background-color: green;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: auto;
-    
-}
-
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: red;
-}
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-
 </style>
+
 <body>
+<form class="col-md-offset-2 col-md-8">
 
-<form:form method="POST" action="signin" commandName="user">
-      <div class="container">
-      <h3>New User?<a href="login.jsp"> Register Here </a></h3>
-      </div>
+<div class="container col-md-offset-2 col-md-8">
 
-  <div class="container">
-    <label><b>Username</b></label>
-    <input type="text" placeholder="Enter User-ID" name="uid" required>
+ 	<label><b>Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="name" required>
+    
+    
+    
+ 	<label><b>Email-ID</b></label>
+    <input type="email" placeholder="Enter Email-ID" name="emailid" required>
 
     <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit">Sign In</button>
-  
-  </div>
+    <input type="password" placeholder="Enter Password" name="password" required>
+    
+    <label><b>Confirm Password</b></label>
+    <input type="password" placeholder="Enter Password" name="cpassword" required>
+    
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Submit</button>
 
-  <div class="container" style="background-color:sky blue">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+</div>
+
+<div class="container">
+ 
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Success!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Your data is added Successfully.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
   </div>
-</form:form>
+  
+</div>
+
+
+
+
+
+
+</form>
+
+
+
+
 
 </body>
+
 </html>

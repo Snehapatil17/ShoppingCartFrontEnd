@@ -7,14 +7,52 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Beautiful You</title>
 </head>
 
 
 <body>
+ welcome..
+ ${successmessage} ${errormessage} ${registermessage}
+ 
+ 
+ <c:if test="${isuserClickedlogin}">
+ 
+<jsp:include page="login.jsp"></jsp:include>
+</c:if>
+ 
+ <c:if test="${not empty errormessage}">
+ <jsp:include page="login.jsp"></jsp:include>
+ </c:if>
+ 
+ 
+ 
+ <c:if test="${sucessmessage}">
+<jsp:include page="login.jsp"></jsp:include>
+</c:if>
+
+<c:if test="${isuserClickedSignin }">
+<jsp:include page="signin.jsp"></jsp:include>
+
+</c:if>
+
+<c:if test="${registermessage }">
+<jsp:include page="signin.jsp"></jsp:include>
+</c:if>
+
+ <c:if test="${isadminclickedcategory }">
+ <jsp:include page="AllCategory.jsp"></jsp:include>
+ </c:if>
  
  <jsp:include page="header.jsp"></jsp:include>
- 	
+ <br>
+ 
+ 
  	
  	
  <br>
@@ -22,26 +60,19 @@
  <jsp:include page="slider.jsp"></jsp:include>
 
  
- <%-- New User <a href="login.jsp">Log In</a>
  
-<c:if test="${isuserClickedlogin}">
-	<jsp:include page="login.jsp"></jsp:include>
-</c:if>
 
-Exisiting User <a href="signin.jsp">Sign In</a>
-
-<c:if test="${isuserClickedsignin }">
-
-<jsp:include page="signin.jsp"></jsp:include>
-
-</c:if>
- --%>
 <br>
 
  <jsp:include page="ExploerCat.jsp"></jsp:include>
 
 
 <br>
+<br>
+<br>
+<br>
+<br>
+
 
 
 <jsp:include page="Footer.jsp"></jsp:include>
@@ -49,5 +80,5 @@ Exisiting User <a href="signin.jsp">Sign In</a>
 
 </body>
 
-</body>
+
 </html>
